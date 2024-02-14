@@ -14,18 +14,20 @@ public class MDIFromGUI {
         fr2 = new JInternalFrame("Application 02",true,true,true,true);
         fr3 = new JInternalFrame("Application 03",true,true,true,true);
         
-        fr1.pack();
+        fr1.setSize(300,300);
         fr1.setVisible(true);
         
-        fr2.pack();
+        fr2.setSize(500,500);
         fr2.setVisible(true);
         
-        fr3.pack();
+        fr3.setSize(300,300);
         fr3.setVisible(true);
 
-        fr2.setLocation(fr1.getX() + fr1.getWidth() + 10, fr1.getY());
+        fr2.setLocation(fr1.getX() + fr1.getWidth() + 300, fr1.getY()+350);
         
-        fr3.setLocation(fr2.getX() + fr2.getWidth() + 10, fr2.getY());
+        fr3.setLocation(fr2.getX() + fr2.getWidth() + 300, fr1.getY()+100);
+        
+        fr1.setLocation(50, 500);
 
         mb = new JMenuBar();
         m1 = new JMenu("File");
