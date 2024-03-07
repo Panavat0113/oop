@@ -1,26 +1,26 @@
 public class Account {
-    protected int balance;
+    protected double balance;
     protected String name;
-    public Account (int balance, String name){
+    public Account (double balance, String name){
         this.name = name;
         this.balance = balance;
     }
-    public void deposit(int a){
+    public void deposit(double a){
         if (a > 0){
             balance += a;
-//            System.out.println(a +" baht is deposited to "+ name +".");
-//        }else{
-//            System.out.println("Input number must be a positive integer.");
+            System.out.println(a +" baht is deposited to "+ name +".");
+        }else{
+            System.out.println("Input number must be a positive integer.");
         }
     }
-    public void withdraw(int a){
+    public void withdraw(double a) throws WithdrawException{
         if (a > 0 && balance-a > 0){
             balance -= a;
-//            System.out.println(a +" baht is withdrawn from "+ name +".");
-//        }else if (a < 0){
-//            System.out.println("Input number must be a positive integer.");
-//        }else{
-//            System.out.println("Not enough money!");
+            System.out.println(a +" baht is withdrawn from "+ name +".");
+        }else if (a < 0){
+            System.out.println("Input number must be a positive integer.");
+        }else{
+            throw new WithdrawException("Account <"+this.getName()+"> has not enough money.");
         }
     }
     public void setName(String name){
@@ -29,10 +29,10 @@ public class Account {
     public String getName(){
         return name;
     }
-    public void setBalance(int balance){
+    public void setBalance(double balance){
         this.balance = balance;
     }
-    public int getBalance(){
+    public double getBalance(){
         return balance;
     }
     public void showAccount(){
