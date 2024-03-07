@@ -20,7 +20,7 @@ public class Account {
         }else if (a < 0){
             System.out.println("Input number must be a positive integer.");
         }else{
-            throw new WithdrawException("Account <"+this.getName()+"> has not enough money.");
+            throw new WithdrawException("Account "+this.getName()+" has not enough money.");
         }
     }
     public void setName(String name){

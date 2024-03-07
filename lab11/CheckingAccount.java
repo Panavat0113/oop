@@ -23,11 +23,12 @@ public class CheckingAccount extends Account{
             balance -= a;
             System.out.println(a +" baht is withdrawn from "+ name +" and your credit balance is "+ credit +".");
         }else if ((balance - a + credit) >= 0){
-            credit -= balance-a;
+            a -= balance;
+            credit -= a;
             balance = 0;
             System.out.println(a +" baht is withdrawn from "+ name +" and your credit balance is "+ credit +".");
         }else{
-            throw new WithdrawException("Account <"+this.getName()+"> has not enough money.");
+            throw new WithdrawException("Account "+this.getName()+" has not enough money.");
         }
     }
     public void withdraw(String a) throws WithdrawException{

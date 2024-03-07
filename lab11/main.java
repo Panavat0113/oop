@@ -10,10 +10,10 @@ public class main {
         cust.getAcct().withdraw(200);
     }
     catch(WithdrawException e){
-        System.out.println(e.getMessage());
+        System.out.println("WithdrawException: "+e.getMessage());
     }
     finally{
-            System.out.println("Thank you.");
-        }
+        System.out.println("Thank you.");
+    }
 }
 }
