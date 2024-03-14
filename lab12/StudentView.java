@@ -15,7 +15,7 @@ public class StudentView implements ActionListener, WindowListener{
         jptop = new JPanel(new GridLayout(4,2));
         main = new JPanel(new FlowLayout());
         txid = new JTextField();        txname = new JTextField();
-        txmoney = new JTextField();
+        txmoney = new JTextField("0");
         de = new JButton("Deposit");
         wi = new JButton("Withdraw");
         
